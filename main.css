@@ -1,0 +1,138 @@
+/* body {
+    background-color: #134873;
+    color: #D1BF6C;
+} */
+html{
+    height: 100%;
+}
+body{
+    background: url('images/color_logo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+a.item{
+    color:#D1BF6C;
+}
+#dark-mode{
+    background-color: #052149;
+    color: #D1BF6C;
+    margin-bottom:50%;
+}
+#dark-mode a{
+    color: #D1BF6C;
+
+}
+#logo-frame img{
+   width:50%;
+   height:75%;
+}
+
+#main{
+    display:none;
+}
+/* The hero image */
+#hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/cover_image.jpg");
+  
+    /* Set a specific height */
+    height: 50%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  #hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .slides {
+    background: white;
+    height: 20rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  .slides .angle {
+    color: lightblue;
+    cursor: pointer;
+    position: relative;
+    top: calc(50% - 20px);
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+  }
+  .slides .angle:hover {
+    transform: scale(1.7);
+  }
+  .slides .angle.right {
+    float: right;
+    margin-right: 1rem;
+  }
+  .slides .angle.left {
+    float: left;
+    margin-left: 1rem;
+  }
+  .slides .slide {
+    height: 100%;
+    padding: 2rem 5rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .slides .slide:not(.active) {
+    display: none;
+  }
+  .slides .slide.inverted {
+    color: white;
+  }
+  .slides .slide.shadow {
+    text-shadow: 1px 1px 2px black;
+  }
+  .slides .slide.image {
+    /* background: url('images/cover_image.jpg') no-repeat center center fixed; */
+    background-size: cover;
+  }
+  .slides .slide.salmon {
+    background: salmon;
+  }
+  .faded {
+    animation: fade 0.5s;
+  }
+  .blurred {
+    animation: blur 0.4s;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opcity: 1;
+    }
+  }
+  @keyframes blur {
+    from {
+      filter: blur(5px);
+    }
+    to {
+      filter: blur(0);
+    }
+  }
+#dark-mode-footer{
+    
+        background-color: #052149;
+        color: #D1BF6C;
+
+    
+}
+#dark-mode-footer a{
+    color: #D1BF6C;
+
+}

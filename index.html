@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"> 
+    <title>KV Beats </title>
+    <link rel="shortcut icon" type="image/png" href="images/rsz_1logo.jpg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css" />
+   
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id ="cover-screen"></div>
+    <div id = "main">
+    <div class="ui top fixed menu" id= "dark-mode">
+      <a class="item" id ="logo-frame" onClick="window.location.href=window.location.href">
+        <img src="images/logo_name_only.png">
+      </a>
+      <a class="item" href = "#about" class="scroll_to">About Us</a>
+      <a class="item" href ="#media" class="scroll_to">Media</a>
+      <a class="item" href = "#testimonials " class="scroll_to">Testimonials</a>
+      <a class="item" href = "#contact" class="scroll_to">Contact</a>
+      <div class="right menu">
+          <a class="item" id="togglePlay"><i class="fas fa-drum fa-fw" ></i>  Play</a>
+      </div>
+      
+    </div>
+    <audio id="myAudio" loop>
+      <source src="Basement Bhangra Anthem.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+
+    <!-- <div class="ui three column grid">
+        <div class=" two row grid">
+          <div class="column"></div>
+          <div class="column"><img class="ui fluid image" src="images/logo.jpg"></div>
+          <div class="column"></div>
+        </div>
+    </div> -->
+    
+    <div id="hero-image">
+        <img class="ui massive image center" src="images/cover_image.jpg" style="visibility: hidden;" > 
+        <div id="hero-text">
+          <h1>We are KV Beats</h1>
+          <p>Let us entertain you!</p>
+          <a class="ui inverted button" href = "#contact">Book Us</a>
+        </div>
+      </div> 
+    <div class="ui vertical stripe segment">
+      <div class="ui text container">
+
+        <h1 class="ui horizontal header divider">
+          <a href="#" id = "about">About Us</a>
+        </h1>
+        <h3 class="ui blue header">The Humble Beginning</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <h3 class="ui blue header">The Team</h3>
+        <div class="ui three stackable cards">
+            <div class="card expand" id ="jeffrey">
+              <div class="image">
+                <img src="images/manu_1.jpg">
+              </div>
+            </div>
+            <div class="ui modal" id="jeffrey-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                  Jeffret Unnikuttan Thomas
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/manu_1.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Manager, Drummer Extraordinaire</div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula ultricies magna, in pulvinar mi consequat blandit. 
+                        Pellentesque non lacus sit amet erat condimentum blandit finibus quis sem. Fusce mi odio, feugiat ac sem et, rhoncus congue arcu.
+                        Duis at ex viverra, vulputate nisi ut, pulvinar ligula. Mauris mollis purus diam, in consectetur est congue in. 
+                        Donec neque felis, pharetra sed hendrerit quis, dignissim nec tortor. Morbi et ante neque. 
+                        Maecenas at ultrices diam, in maximus lacus. Morbi eu tellus id dolor vestibulum placerat a at mi.</p>
+                   
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="images/manu_2.jpg">
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="images/manu_3.jpg">
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="images/manu_4.jpg">
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="images/manu_5.jpg">
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="images/manu_6.jpg">
+              </div>
+            </div>
+          </div>
+
+        <h1 class="ui horizontal header divider">
+          <a href="#" id = "media">Media</a>
+        </h1>
+        <h3 class="ui blue header">Images</h3>
+        <div class="ui container">
+            <div class="ui text container slides">
+              <i class="big left angle icon"></i>
+              <i class="big right angle icon"></i>
+              <div class="inverted shadow blurred image slide active" style="background-image: url(images/bros.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/fam.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/beats.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/church.jpg);">
+              </div>
+            </div>
+          </div>
+     
+         <h3 class="ui blue header">Video</h3>
+         <div class = "container"> <video id ='vid' width = "700" src="video/work_sample.mp4" controls>
+         </video></div>
+        
+
+        <h1 class="ui horizontal header divider">
+          <a href="#" id = "testimonials">Testimonials</a>
+        </h1>
+        <h3 class="ui blue header">Did We Tell You About Our Bananas?</h3>
+        <div class="ui link cards">
+            <div class="card">
+              <div class="image">
+                <img src="images/wedding_a.jpg">
+              </div>
+              <div class="content">
+                <div class="header">Jincy & Monai</div>
+                <div class="meta">
+                  <a>Wedding</a>
+                </div>
+                <div class="description">
+                  Jincy and Monai's wedding reception.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  10-29-18
+                </span>
+                <span>
+                  <i class="user icon"></i>
+                  75 Guests
+                </span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="images/wedding_b.jpg">
+              </div>
+              <div class="content">
+                <div class="header">Sam & Jan</div>
+                <div class="meta">
+                  <span class="date">Wedding</span>
+                </div>
+                <div class="description">
+                  Sam and Jan's Wedding procession!
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  11-24-18
+                </span>
+                <span>
+                  <i class="user icon"></i>
+                  120 Guests
+                </span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="images/wedding_c.jpg">
+              </div>
+              <div class="content">
+                <div class="header">Elyse & Jake</div>
+                <div class="meta">
+                  <a>Wedding Party</a>
+                </div>
+                <div class="description">
+                  Elys jams out to KV Beats.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  12-21-18
+                </span>
+                <span>
+                  <i class="user icon"></i>
+                  151 Guests
+                </span>
+              </div>
+            </div>
+          </div>
+        <h1 class="ui horizontal header divider">
+            <a href="#" id = "contact">Contact</a>
+        </h1>
+        <h3 class="ui blue header">Reach Out to Us</h3>
+        <p><i class="envelope outline icon"></i> kvbeats@gmail.com</p>
+        <p><i class="phone icon"></i> 1-800-KVBEATS</p>
+        <p><i class="comments outline icon"></i> <button class="ui facebook button">
+            <i class="facebook icon"></i>
+            Facebook
+          </button>
+          <button class="ui twitter button">
+            <i class="twitter icon"></i>
+            Twitter
+          </button>
+          <button class="ui instagram button">
+            <i class="instagram icon"></i>
+            Instagram
+          </button>
+          <button class="ui youtube button">
+            <i class="youtube icon"></i>
+            YouTube
+          </button></p>
+        
+
+      </div>
+    </div>
+  
+  
+
+    <div class="ui bottom menu " id="dark-mode-footer">
+      
+    </div>
+    </div>
+    
+  </body>
+</html> 
+
