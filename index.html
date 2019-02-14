@@ -20,19 +20,21 @@
     <div id = "main">
     <div class="ui top fixed menu" id= "dark-mode">
       <a class="item" id ="logo-frame" onClick="window.location.href=window.location.href">
-        <img src="images/logo_name_only.png">
+        <img src="images/logo_words_only.png">
       </a>
       <a class="item" href = "#about" class="scroll_to">About Us</a>
       <a class="item" href ="#media" class="scroll_to">Media</a>
       <a class="item" href = "#testimonials " class="scroll_to">Testimonials</a>
       <a class="item" href = "#contact" class="scroll_to">Contact</a>
       <div class="right menu">
-          <a class="item" id="togglePlay"><i class="fas fa-drum fa-fw" ></i>  Play</a>
+          <a class="item" id="togglePlay"><i id = "toggle-icon" class="fas fa-volume-up"></i>  Toggle Sound</a>
       </div>
       
     </div>
+    <!-- Audio autoplay override for Chrome -->
+    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
     <audio id="myAudio" loop>
-      <source src="Basement Bhangra Anthem.mp3" type="audio/mpeg">
+      <source src="title_track.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
@@ -46,7 +48,7 @@
     </div> -->
     
     <div id="hero-image">
-        <img class="ui massive image center" src="images/cover_image.jpg" style="visibility: hidden;" > 
+        <img class="ui big image center" src="images/cover_image.jpg" style="visibility: hidden;" > 
         <div id="hero-text">
           <h1>We are KV Beats</h1>
           <p>Let us entertain you!</p>
@@ -64,23 +66,23 @@
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
         <h3 class="ui blue header">The Team</h3>
-        <div class="ui three stackable cards">
+        <div class="ui two stackable cards">
             <div class="card expand" id ="jeffrey">
               <div class="image">
-                <img src="images/manu_1.jpg">
+                <img src="images/jeffrey.jpg">
               </div>
             </div>
             <div class="ui modal" id="jeffrey-modal">
                 <i class="close icon"></i>
                 <div class="header">
-                  Jeffret Unnikuttan Thomas
+                  Jeffrey Thomas Kochuveettil
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/manu_1.jpg">
+                    <img src="images/jeffrey.jpg">
                   </div>
                   <div class="description">
-                    <div class="ui header">Manager, Drummer Extraordinaire</div>
+                    <div class="ui header">Owner / Founder of Kochuveettil Beats</div>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula ultricies magna, in pulvinar mi consequat blandit. 
                         Pellentesque non lacus sit amet erat condimentum blandit finibus quis sem. Fusce mi odio, feugiat ac sem et, rhoncus congue arcu.
                         Duis at ex viverra, vulputate nisi ut, pulvinar ligula. Mauris mollis purus diam, in consectetur est congue in. 
@@ -95,30 +97,155 @@
                   </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card expand" id ="jonathan">
               <div class="image">
-                <img src="images/manu_2.jpg">
+                <img src="images/jonathan.jpg">
               </div>
             </div>
-            <div class="card">
+            <div class="ui modal" id="jonathan-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                  Jonathan
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/jonathan.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Lead Drummer</div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula ultricies magna, in pulvinar mi consequat blandit. 
+                        Pellentesque non lacus sit amet erat condimentum blandit finibus quis sem. Fusce mi odio, feugiat ac sem et, rhoncus congue arcu.
+                        Duis at ex viverra, vulputate nisi ut, pulvinar ligula. Mauris mollis purus diam, in consectetur est congue in. 
+                        Donec neque felis, pharetra sed hendrerit quis, dignissim nec tortor. Morbi et ante neque. 
+                        Maecenas at ultrices diam, in maximus lacus. Morbi eu tellus id dolor vestibulum placerat a at mi.</p>
+                   
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
+            </div>
+            <div class="card expand" id ="manu">
               <div class="image">
-                <img src="images/manu_3.jpg">
+                <img src="images/manu.jpg">
               </div>
             </div>
-            <div class="card">
+            <div class="ui modal" id="manu-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                  Manu Sunny
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/manu.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Vice President of Kochuveetil Beats</div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula ultricies magna, in pulvinar mi consequat blandit. 
+                        Pellentesque non lacus sit amet erat condimentum blandit finibus quis sem. Fusce mi odio, feugiat ac sem et, rhoncus congue arcu.
+                        Duis at ex viverra, vulputate nisi ut, pulvinar ligula. Mauris mollis purus diam, in consectetur est congue in. 
+                        Donec neque felis, pharetra sed hendrerit quis, dignissim nec tortor. Morbi et ante neque. 
+                        Maecenas at ultrices diam, in maximus lacus. Morbi eu tellus id dolor vestibulum placerat a at mi.</p>
+                   
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
+            </div>
+            <div class="card expand" id ="bryan">
               <div class="image">
-                <img src="images/manu_4.jpg">
+                <img src="images/bryan.jpg">
               </div>
             </div>
-            <div class="card">
+            <div class="ui modal" id="bryan-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                  Bryan Hughey
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/bryan.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Drummer for Kochuveettil Beats</div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula ultricies magna, in pulvinar mi consequat blandit. 
+                        Pellentesque non lacus sit amet erat condimentum blandit finibus quis sem. Fusce mi odio, feugiat ac sem et, rhoncus congue arcu.
+                        Duis at ex viverra, vulputate nisi ut, pulvinar ligula. Mauris mollis purus diam, in consectetur est congue in. 
+                        Donec neque felis, pharetra sed hendrerit quis, dignissim nec tortor. Morbi et ante neque. 
+                        Maecenas at ultrices diam, in maximus lacus. Morbi eu tellus id dolor vestibulum placerat a at mi.</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui three stackable cards">
+            <h3 class="ui blue header">The Hype Boys</h3>
+            <div class="card expand" id ="jude">
               <div class="image">
-                <img src="images/manu_5.jpg">
+                <img src="images/jude.jpg">
               </div>
             </div>
-            <div class="card">
+            <div class="ui modal" id="jude-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                  Jude Mathew
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/jude.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Certified Hype Man/Player for Kochuveettil Beats</div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula ultricies magna, in pulvinar mi consequat blandit. 
+                        Pellentesque non lacus sit amet erat condimentum blandit finibus quis sem. Fusce mi odio, feugiat ac sem et, rhoncus congue arcu.
+                        Duis at ex viverra, vulputate nisi ut, pulvinar ligula. Mauris mollis purus diam, in consectetur est congue in. 
+                        Donec neque felis, pharetra sed hendrerit quis, dignissim nec tortor. Morbi et ante neque. 
+                        Maecenas at ultrices diam, in maximus lacus. Morbi eu tellus id dolor vestibulum placerat a at mi.</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
+            </div>
+            <div class="card expand" id ="jesvin">
               <div class="image">
-                <img src="images/manu_6.jpg">
+                <img src="images/jesvin.jpg">
               </div>
+            </div>
+            <div class="ui modal" id="jesvin-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                  Jesvin “Appu” Elavumkal
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/jesvin.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Certified Hype Man- Player for Kochuveettil Beats</div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula ultricies magna, in pulvinar mi consequat blandit. 
+                        Pellentesque non lacus sit amet erat condimentum blandit finibus quis sem. Fusce mi odio, feugiat ac sem et, rhoncus congue arcu.
+                        Duis at ex viverra, vulputate nisi ut, pulvinar ligula. Mauris mollis purus diam, in consectetur est congue in. 
+                        Donec neque felis, pharetra sed hendrerit quis, dignissim nec tortor. Morbi et ante neque. 
+                        Maecenas at ultrices diam, in maximus lacus. Morbi eu tellus id dolor vestibulum placerat a at mi.</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
             </div>
           </div>
 
@@ -130,119 +257,176 @@
             <div class="ui text container slides">
               <i class="big left angle icon"></i>
               <i class="big right angle icon"></i>
-              <div class="inverted shadow blurred image slide active" style="background-image: url(images/bros.jpg);">
+              <div class="inverted shadow blurred image slide active" style="background-image: url(images/gallery/bros.jpg);">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/fam.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/fam.jpg);">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/beats.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/beats.jpg);">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/church.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/church.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/kna_flex.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/purple_bros.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/brown_bros.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/drums.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/behind_the_scenes.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/jammin_out.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/pink.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/manu_entrance.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/group.jpg);">
               </div>
             </div>
           </div>
      
          <h3 class="ui blue header">Video</h3>
-         <div class = "container"> <video id ='vid' width = "700" src="video/work_sample.mp4" controls>
-         </video></div>
+         <div class = "container"> 
+          <video id ='vid' width = "700" preload="metadata" controls>
+            <source src="video/work_sample.mp4#t=0.1" type="video/mp4">
+          </video></div>
         
 
         <h1 class="ui horizontal header divider">
           <a href="#" id = "testimonials">Testimonials</a>
         </h1>
-        <h3 class="ui blue header">Did We Tell You About Our Bananas?</h3>
+        <h3 class="ui blue header">Our works speaks for itself, but here's what people have to say!</h3>
         <div class="ui link cards">
-            <div class="card">
-              <div class="image">
-                <img src="images/wedding_a.jpg">
-              </div>
-              <div class="content">
-                <div class="header">Jincy & Monai</div>
-                <div class="meta">
-                  <a>Wedding</a>
-                </div>
-                <div class="description">
-                  Jincy and Monai's wedding reception.
-                </div>
-              </div>
-              <div class="extra content">
-                <span class="right floated">
-                  10-29-18
-                </span>
-                <span>
-                  <i class="user icon"></i>
-                  75 Guests
-                </span>
-              </div>
-            </div>
-            <div class="card">
+            <div class="card expand" id = "joetisa">
               <div class="image">
                 <img src="images/wedding_b.jpg">
               </div>
               <div class="content">
-                <div class="header">Sam & Jan</div>
+                <div class="header">Joe & Tisa Kandarappallil</div>
                 <div class="meta">
                   <span class="date">Wedding</span>
                 </div>
                 <div class="description">
-                  Sam and Jan's Wedding procession!
+                  <p>My husband and I used Kochuveetil Beats for our mylanchi, Chantham charth, and wedding and they definitely delivered. Best ...
                 </div>
               </div>
               <div class="extra content">
                 <span class="right floated">
-                  11-24-18
+                  6-9-2018
                 </span>
                 <span>
-                  <i class="user icon"></i>
-                  120 Guests
-                </span>
+                    <span>
+                        <i class="user icon"></i>
+                        Read More
+                      </span>
               </div>
             </div>
-            <div class="card">
+            <div class="ui modal" id="joetisa-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                  Joe & Tisa Kandarappallil 
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/wedding_b.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Wedding</div>
+                    <p>My husband and I used Kochuveetil Beats for our mylanchi, Chantham charth, and wedding and they definitely delivered. Best investment ever! We booked them super late but they were so flexible, patient, and super easy to work with. They came early to all of our events  to make sure everything was set up and hyped up our crowd. And they all work so well with each other. Our guests couldn't stop talking about them the next day! These guys are the best and we're so happy they were part of our wedding weekend! 
+                      </p>
+                      <p>Thanks Jeffrey for coordinating everything!</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
+            </div>
+            
+            <div class="card expand" id ="tommynina">
               <div class="image">
                 <img src="images/wedding_c.jpg">
               </div>
               <div class="content">
-                <div class="header">Elyse & Jake</div>
+                <div class="header">Tommy & Nina</div>
                 <div class="meta">
-                  <a>Wedding Party</a>
+                  <a>Engagement</a>
                 </div>
                 <div class="description">
-                  Elys jams out to KV Beats.
+                  <p>Thomas Pathiyil and I booked Kochuveetil Beats for our engagement party and they were phenomenal! They did exactly ...
+                  </p>
                 </div>
               </div>
               <div class="extra content">
                 <span class="right floated">
-                  12-21-18
+                  9-1-2018
                 </span>
                 <span>
                   <i class="user icon"></i>
-                  151 Guests
+                  Read More
                 </span>
               </div>
             </div>
+            <div class="ui modal" id="tommynina-modal">
+                <i class="close icon"></i>
+                <div class="header">
+                 Tommy & Nina  
+                </div>
+                <div class="image content">
+                  <div class="ui medium image">
+                    <img src="images/wedding_c.jpg">
+                  </div>
+                  <div class="description">
+                    <div class="ui header">Engagement</div>
+                    <p>Thomas Pathiyil and I booked Kochuveetil Beats for our engagement party and they were phenomenal! They did exactly what we envisioned for the day and MORE--from chenda during our entrance of "Finesse" to playing dhol on the dance floor for all of our guests! These guys are very talented and do everything you are trying to capture for any celebration 🙂
+                      </p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <div class="ui black deny button">
+                    Close
+                  </div>
+                </div>
+            </div>
+            
           </div>
         <h1 class="ui horizontal header divider">
             <a href="#" id = "contact">Contact</a>
         </h1>
         <h3 class="ui blue header">Reach Out to Us</h3>
-        <p><i class="envelope outline icon"></i> kvbeats@gmail.com</p>
-        <p><i class="phone icon"></i> 1-800-KVBEATS</p>
-        <p><i class="comments outline icon"></i> <button class="ui facebook button">
+        <p><i class="envelope outline icon"></i> Kochuveettilbeats@gmail.com</p>
+        <!-- <p><i class="phone icon"></i> 1-800-KVBEATS</p> -->
+        <p><i class="comments outline icon"></i> 
+          <a  href = "https://www.facebook.com/kveettilbeats/"> <button class="ui facebook button">
             <i class="facebook icon"></i>
             Facebook
-          </button>
-          <button class="ui twitter button">
+          </button></a>
+          <a href = "https://twitter.com/kveettilbeats?fbclid=IwAR25D4vwuAYdYyzLBUEG7mHjNPzivINSoSniIzTVN4u6IBoy7tG2m15jDPg"><button class="ui twitter button">
             <i class="twitter icon"></i>
             Twitter
-          </button>
-          <button class="ui instagram button">
+          </button></a>
+          <a href = "https://www.instagram.com/kochuveettilbeats/?utm_source=ig_profile_share&igshid=grx5gezvnecf&fbclid=IwAR3TL91rYwKzflgccDWR_goNMR02R4s22upGa5vKj1YaUFiDqsbHACPKIwM"><button class="ui instagram button">
             <i class="instagram icon"></i>
             Instagram
-          </button>
-          <button class="ui youtube button">
+          </button></a>
+          <a href = "https://www.youtube.com/channel/UCzaRaBYXsVIvC1fDmsCEzmg?fbclid=IwAR3dGRhtTH7ULNRzy9hejBkk9c8W9TlJy6wY4xFVvv0P4BV-jb38q8I6Vo4"><button class="ui youtube button">
             <i class="youtube icon"></i>
             YouTube
-          </button></p>
+          </button></a>
+        </p>
+        <h3 class="ui blue header">Check us out On:</h3>
+        <p>
+          <a href = "https://www.google.com/maps/place/Kochuveettil+Beats/@23.0685875,-136.0304374,3z/data=!3m1!4b1!4m5!3m4!1s0x880fc79308991bc5:0x17ce51a13bdd54eb!8m2!3d30.5921076!4d-97.9336552?hl=en-US"><button class="ui button">
+            <i class="google icon"></i>
+            Google Reviews
+          </button></a>
+          <a href = "https://www.weddingwire.com/biz/kochuveettil-beats-glenview/740eae38c3c76d0c.html"><button class="ui button">
+            <i class="birthday cake icon"></i>
+            Wedding Wire
+          </button></a>
+        </p>
         
 
       </div>

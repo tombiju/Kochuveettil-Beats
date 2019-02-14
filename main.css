@@ -35,11 +35,9 @@ a.item{
 /* The hero image */
 #hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/cover_image.jpg");
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/slideshow/cover_image.jpg");
     /* Set a specific height */
     height: 50%;
-  
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
@@ -135,4 +133,8 @@ a.item{
 #dark-mode-footer a{
     color: #D1BF6C;
 
+}
+.ui.card > .image:not(.ui) > img, .ui.cards > .card > .image:not(.ui) > img {
+  height: 335px;
+  width:100%;
 }
