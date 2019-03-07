@@ -26,12 +26,13 @@ def send_email():
     last_name = request.form.get('last_name')
     email = request.form.get('email')
     comments = request.form.get('comments')
+    text = "Sender: {} {} \n Email: {} \n Message: {} \n".format(first_name, last_name, email, comments)
     if None not in [first_name, last_name, email, comments]:
         with app.app_context():
             msg = Message(subject="KV Beats Website Message",
                         sender=app.config.get("MAIL_USERNAME"),
                         recipients=["<Kochuveettilbeats@gmail.com>"], # replace with your email for testing
-                        body=comments)
+                        body=text)
             mail.send(msg)
     return redirect(url_for('index'))
 
