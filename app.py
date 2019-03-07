@@ -30,7 +30,7 @@ def send_email():
         with app.app_context():
             msg = Message(subject="KV Beats Website Message",
                         sender=app.config.get("MAIL_USERNAME"),
-                        recipients=["<tombiju95@yahoo.com>"], # replace with your email for testing
+                        recipients=["<Kochuveettilbeats@gmail.com>"], # replace with your email for testing
                         body=comments)
             mail.send(msg)
     return redirect(url_for('index'))
