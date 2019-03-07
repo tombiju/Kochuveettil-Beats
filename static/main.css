@@ -11,6 +11,10 @@ body{
     background-size: cover;
     background-position: center;
     height: 100%;
+ 
+}
+p, p >ul>li{
+font-size: 18px;
 }
 a.item{
     color:#D1BF6C;
@@ -18,7 +22,7 @@ a.item{
 #dark-mode{
     background-color: #052149;
     color: #D1BF6C;
-    margin-bottom:50%;
+    font-size: 25px;
 }
 #dark-mode a{
     color: #D1BF6C;
@@ -134,7 +138,18 @@ a.item{
     color: #D1BF6C;
 
 }
-.ui.card > .image:not(.ui) > img, .ui.cards > .card > .image:not(.ui) > img {
+.ui.cards > .card > .image > img  {
   height: 335px;
   width:100%;
+}
+h1 > a{
+  color: #fbbd08;
+}
+.ui.link.cards > .card > .image > img {
+  height: 100%;
+  width: 100%;
+}
+
+.ui.menu {
+  margin:0;
 }

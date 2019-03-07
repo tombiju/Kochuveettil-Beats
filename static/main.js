@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-    var slideshowImages = ["cover_image.jpg", "manu_center.jpg", "syro_celebs.jpg", "cool.jpg", "shuffle.jpg", "wedding_holla.jpg"]
-    var slideshowPositions = {cover_image: "center", manu_center: "initial", syro_celebs:"initial", cool:"center", shuffle:"center", wedding_holla:"initial"};
+    var slideshowImages = ["cover_image.jpg", "manu_center.jpg", "syro_celebs.jpg", "cool.jpg", "shuffle.jpg", "wedding_holla.jpg", "focus.jpg"]
+    var slideshowPositions = {cover_image: "center", manu_center: "initial", syro_celebs:"initial", cool:"center", shuffle:"center", wedding_holla:"initial", focus: "center"};
     setTimeout(function(){ 
         $("body").fadeOut(1000, function() {
             $("body").css("background-image", "none");
@@ -76,6 +76,14 @@ $( document ).ready(function() {
         $(computed_id).modal('show');
     });
 
+    $('.ui.yellow.animated.button').click(function(){
+        $('.ui.basic.modal')
+            .modal('show')
+        ;
+    });
+
+   
+
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
@@ -86,8 +94,63 @@ $( document ).ready(function() {
             index = getRandomInt(slideshowImages.length);
         }while (index == previousIndex);
         previousIndex = index; 
-        document.getElementById("hero-image").style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/slideshow/"+slideshowImages[index]+"')";
+        document.getElementById("hero-image").style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/images/slideshow/"+slideshowImages[index]+"')";
         document.getElementById("hero-image").style.backgroundPosition = slideshowPositions[slideshowImages[index].substring(0, slideshowImages[index].indexOf("."))];  
     }, 5000);
+
+    $('.ui.form').form({
+        fields: {
+        first_name: {
+            identifier: 'first_name',
+            rules: [
+            {
+                type   : 'empty',
+                prompt : 'Please enter your first name.'
+            }
+            ]
+        },
+        last_name: {
+            identifier: 'last_name',
+            rules: [
+            {
+                type   : 'empty',
+                prompt : 'Please enter your last name.'
+            }
+            ]
+        },
+        email: {
+            identifier: 'email',
+            rules: [
+            {
+                type   : 'email',
+                prompt : 'Please enter a valid email for us to reach back to you with.'
+            }
+            ]
+        },
+        comments: {
+            identifier: 'comments',
+            rules: [
+            {
+                type   : 'minLength[25]',
+                prompt : 'Your response must be at least {ruleValue} characters.'
+            }
+            ]
+        }
+        }
+    });
+
+    $('#email_button').click(function() {
+        $.ajax({
+            url: '/send_email',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
 
   });

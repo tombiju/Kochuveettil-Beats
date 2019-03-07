@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8"> 
     <title>KV Beats </title>
-    <link rel="shortcut icon" type="image/png" href="images/rsz_1logo.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename = 'images/rsz_1logo.jpg')}}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
    
     <script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -13,14 +13,14 @@
 			  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
   </head>
   <body>
     <div id ="cover-screen"></div>
     <div id = "main">
-    <div class="ui top fixed menu" id= "dark-mode">
+    <div class="ui stackable top menu" id= "dark-mode">
       <a class="item" id ="logo-frame" onClick="window.location.href=window.location.href">
-        <img src="images/logo_words_only.png">
+        <img src="{{url_for('static', filename = 'images/logo_words_only.png')}}">
       </a>
       <a class="item" href = "#about" class="scroll_to">About Us</a>
       <a class="item" href ="#media" class="scroll_to">Media</a>
@@ -32,9 +32,9 @@
       
     </div>
     <!-- Audio autoplay override for Chrome -->
-    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <iframe src="{{url_for('static', filename='audio/silence.mp3')}}" allow="autoplay" id="audio" style="display:none"></iframe>
     <audio id="myAudio" loop>
-      <source src="title_track.mp3" type="audio/mpeg">
+      <source src="{{url_for('static', filename='audio/title_track.mp3')}}" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
@@ -42,13 +42,13 @@
     <!-- <div class="ui three column grid">
         <div class=" two row grid">
           <div class="column"></div>
-          <div class="column"><img class="ui fluid image" src="images/logo.jpg"></div>
+          <div class="column"><img class="ui fluid image" src="{{url_for('static', filename = 'images/logo.jpg')}}"></div>
           <div class="column"></div>
         </div>
     </div> -->
     
     <div id="hero-image">
-        <img class="ui big image center" src="images/cover_image.jpg" style="visibility: hidden;" > 
+        <img class="ui huge image center" src="{{url_for('static', filename = 'images/slideshow/cover_image.jpg')}}" style="visibility: hidden;" > 
         <div id="hero-text">
           <h1>We are KV Beats</h1>
           <p>Let us entertain you!</p>
@@ -61,15 +61,26 @@
         <h1 class="ui horizontal header divider">
           <a href="#" id = "about">About Us</a>
         </h1>
-        <h3 class="ui blue header">The Humble Beginning</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <h3 class="ui blue header">We Specialize in Making Moments Memorable</h3>
+        <p>Kochuveettil Beats is a dynamic entertainment company offering a team of only the highest quality experienced entertainers to make your next event truly unforgettable.</p>
+        <p>Our entertainment options include:
+          <ul>
+            <li>Chenda/Dhol</li>
+            <li>Drumline/Drum set</li>
+            <li>Electronic Drum pad</li>
+            <li>Brass Instruments including Trumpet & Sax</li>
+            <li>Violinists</li>
+            <li>Pianists</li>
+            <li>Singers</li>
+          </ul>
+        </p>
+        <p>
+Kochuveettil Beats is recognized across the globe for bringing the passion and party! From private affairs to large corporate events, we bring the BEAT! Book us for your next event to be a part of the KV Beats Experience!</p>
         <h3 class="ui blue header">The Team</h3>
         <div class="ui two stackable cards">
             <div class="card expand" id ="jeffrey">
               <div class="image">
-                <img src="images/jeffrey.jpg">
+                <img src="{{url_for('static', filename = 'images/jeffrey.jpg')}}">
               </div>
             </div>
             <div class="ui modal" id="jeffrey-modal">
@@ -79,7 +90,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/jeffrey.jpg">
+                    <img src="{{url_for('static', filename = 'images/jeffrey.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Owner / Founder of Kochuveettil Beats</div>
@@ -99,7 +110,7 @@
             </div>
             <div class="card expand" id ="jonathan">
               <div class="image">
-                <img src="images/jonathan.jpg">
+                <img src="{{url_for('static', filename = 'images/jonathan.jpg')}}">
               </div>
             </div>
             <div class="ui modal" id="jonathan-modal">
@@ -109,7 +120,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/jonathan.jpg">
+                    <img src="{{url_for('static', filename = 'images/jonathan.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Lead Drummer</div>
@@ -129,7 +140,7 @@
             </div>
             <div class="card expand" id ="manu">
               <div class="image">
-                <img src="images/manu.jpg">
+                <img src="{{url_for('static', filename = 'images/manu.jpg')}}">
               </div>
             </div>
             <div class="ui modal" id="manu-modal">
@@ -139,7 +150,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/manu.jpg">
+                    <img src="{{url_for('static', filename = 'images/manu.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Vice President of Kochuveetil Beats</div>
@@ -159,7 +170,7 @@
             </div>
             <div class="card expand" id ="bryan">
               <div class="image">
-                <img src="images/bryan.jpg">
+                <img src="{{url_for('static', filename = 'images/bryan.jpg')}}">
               </div>
             </div>
             <div class="ui modal" id="bryan-modal">
@@ -169,7 +180,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/bryan.jpg">
+                    <img src="{{url_for('static', filename = 'images/bryan.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Drummer for Kochuveettil Beats</div>
@@ -191,7 +202,7 @@
             <h3 class="ui blue header">The Hype Boys</h3>
             <div class="card expand" id ="jude">
               <div class="image">
-                <img src="images/jude.jpg">
+                <img src="{{url_for('static', filename = 'images/jude.jpg')}}">
               </div>
             </div>
             <div class="ui modal" id="jude-modal">
@@ -201,7 +212,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/jude.jpg">
+                    <img src="{{url_for('static', filename = 'images/jude.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Certified Hype Man/Player for Kochuveettil Beats</div>
@@ -220,7 +231,7 @@
             </div>
             <div class="card expand" id ="jesvin">
               <div class="image">
-                <img src="images/jesvin.jpg">
+                <img src="{{url_for('static', filename = 'images/jesvin.jpg')}}">
               </div>
             </div>
             <div class="ui modal" id="jesvin-modal">
@@ -230,7 +241,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/jesvin.jpg">
+                    <img src="{{url_for('static', filename = 'images/jesvin.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Certified Hype Man- Player for Kochuveettil Beats</div>
@@ -252,36 +263,36 @@
         <h1 class="ui horizontal header divider">
           <a href="#" id = "media">Media</a>
         </h1>
-        <h3 class="ui blue header">Images</h3>
+        <h3 class="ui blue header">images</h3>
         <div class="ui container">
             <div class="ui text container slides">
               <i class="big left angle icon"></i>
               <i class="big right angle icon"></i>
-              <div class="inverted shadow blurred image slide active" style="background-image: url(images/gallery/bros.jpg);">
+              <div class="inverted shadow blurred image slide active" style="background-image: url({{url_for('static', filename = 'images/gallery/bros.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/fam.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/fam.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/beats.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/beats.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/church.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/church.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/kna_flex.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/kna_flex.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/purple_bros.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/purple_bros.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/brown_bros.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/brown_bros.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/drums.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/drums.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/behind_the_scenes.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/behind_the_scenes.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/jammin_out.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/jammin_out.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/pink.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/pink.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/manu_entrance.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/manu_entrance.jpg')}});">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/group.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url({{url_for('static', filename = 'images/gallery/group.jpg')}});">
               </div>
             </div>
           </div>
@@ -289,7 +300,7 @@
          <h3 class="ui blue header">Video</h3>
          <div class = "container"> 
           <video id ='vid' width = "700" preload="metadata" controls>
-            <source src="video/work_sample.mp4#t=0.1" type="video/mp4">
+            <source src="{{url_for('static', filename = 'video/work_sample.mp4')}}" type="video/mp4">
           </video></div>
         
 
@@ -300,7 +311,7 @@
         <div class="ui link cards">
             <div class="card expand" id = "joetisa">
               <div class="image">
-                <img src="images/wedding_b.jpg">
+                <img src="{{url_for('static', filename = 'images/wedding_b.jpg')}}">
               </div>
               <div class="content">
                 <div class="header">Joe & Tisa Kandarappallil</div>
@@ -329,7 +340,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/wedding_b.jpg">
+                    <img src="{{url_for('static', filename = 'images/wedding_b.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Wedding</div>
@@ -347,7 +358,7 @@
             
             <div class="card expand" id ="tommynina">
               <div class="image">
-                <img src="images/wedding_c.jpg">
+                <img src="{{url_for('static', filename = 'images/wedding_c.jpg')}}">
               </div>
               <div class="content">
                 <div class="header">Tommy & Nina</div>
@@ -376,7 +387,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="images/wedding_c.jpg">
+                    <img src="{{url_for('static', filename = 'images/wedding_c.jpg')}}">
                   </div>
                   <div class="description">
                     <div class="ui header">Engagement</div>
@@ -396,8 +407,15 @@
             <a href="#" id = "contact">Contact</a>
         </h1>
         <h3 class="ui blue header">Reach Out to Us</h3>
-        <p><i class="envelope outline icon"></i> Kochuveettilbeats@gmail.com</p>
-        <!-- <p><i class="phone icon"></i> 1-800-KVBEATS</p> -->
+        <p><i class="envelope outline icon"></i> Kochuveettilbeats@gmail.com
+        <div class="ui yellow animated button" tabindex="0">
+            <div class="visible content">Send</div>
+            <div class="hidden content">
+              <i class="paper plane icon"></i>
+            </div>
+        </div>
+        </p>
+        <p><i class="phone icon"></i> 847-612-0606</p>
         <p><i class="comments outline icon"></i> 
           <a  href = "https://www.facebook.com/kveettilbeats/"> <button class="ui facebook button">
             <i class="facebook icon"></i>
@@ -427,7 +445,42 @@
             Wedding Wire
           </button></a>
         </p>
-        
+        <div class="ui basic modal">
+          <div class="ui icon header">
+            <i class="airplane icon"></i><i class="paper plane outline icon"></i>
+            Send a Message!
+          </div>
+          <form class = "ui form" action = "/send_email" method = "POST" role = "form">
+          <div class="content container">
+            <p>
+              Your First Name: <input type="text" name="first_name"><br>
+            </p>
+            <p>
+              Your Last Name: <input type="text" name="last_name"><br>
+            </p>
+             <p>
+              Your Email: <input type="text" name="email"><br>
+            </p>
+            <p>
+              Comments: <textarea rows="5" cols="30" name="comments"></textarea>
+            </p>
+          </div>
+          <div class="ui error message"></div>
+          <div class="actions">
+            <p>
+            <div class="ui red basic cancel inverted button">
+              <i class="remove icon"></i>
+              Close
+            </div>
+            <div id ="email_button" class="ui submit green basic inverted button">Submit</div>
+            </form>
+          </p>
+          </div>
+        </div>
+
+
+
+
 
       </div>
     </div>
