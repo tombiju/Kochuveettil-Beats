@@ -7,7 +7,7 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
-    "MAIL_PORT": 587,  # 465 for SSL, 587 for TLS
+    "MAIL_PORT": 465,  # 465 for SSL, 587 for TLS
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": config['email']['username'],
