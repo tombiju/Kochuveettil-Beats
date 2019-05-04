@@ -34,7 +34,7 @@ def send_email():
                         recipients=["<***REMOVED***>"], # replace with your email for testing
                         body=text)
             mail.send(msg)
-    return redirect("www.kvbeats.com")
+    return redirect("/")
 
 if __name__ == '__main__':
     app.run(debug=True)
