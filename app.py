@@ -34,7 +34,7 @@ def send_email():
                         recipients=["<Kochuveettilbeats@gmail.com>"], # replace with your email for testing
                         body=text)
             mail.send(msg)
-    return redirect(url_for('index'))
+    return redirect("www.kvbeats.com")
 
 if __name__ == '__main__':
     app.run(debug=True)
