@@ -22,18 +22,18 @@ def index():
 
 @app.route('/send_email', methods=['POST'])
 def send_email():
-    first_name =  request.form.get('first_name')
-    last_name = request.form.get('last_name')
-    email = request.form.get('email')
-    comments = request.form.get('comments')
-    text = "Sender: {} {} \n Email: {} \n Message: {} \n".format(first_name, last_name, email, comments)
-    if None not in [first_name, last_name, email, comments]:
-        with app.app_context():
-            msg = Message(subject="KV Beats Website Message",
-                        sender=app.config.get("MAIL_USERNAME"),
-                        recipients=["<***REMOVED***>"], # replace with your email for testing
-                        body=text)
-            mail.send(msg)
+    # first_name =  request.form.get('first_name')
+    # last_name = request.form.get('last_name')
+    # email = request.form.get('email')
+    # comments = request.form.get('comments')
+    # text = "Sender: {} {} \n Email: {} \n Message: {} \n".format(first_name, last_name, email, comments)
+    # if None not in [first_name, last_name, email, comments]:
+    #     with app.app_context():
+    #         msg = Message(subject="KV Beats Website Message",
+    #                     sender=app.config.get("MAIL_USERNAME"),
+    #                     recipients=["<***REMOVED***>"], # replace with your email for testing
+    #                     body=text)
+    #         mail.send(msg)
     return redirect("/")
 
 if __name__ == '__main__':
