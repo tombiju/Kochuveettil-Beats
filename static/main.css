@@ -70,7 +70,7 @@ a.item {
 }
 
 #toggle-icon {
-  margin-right: 10px;
+  
 }
 
 .slides {
@@ -145,7 +145,7 @@ a.item {
   }
 
   to {
-    opcity: 1;
+    opacity: 1;
   }
 }
 
