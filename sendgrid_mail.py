@@ -11,7 +11,7 @@ def dispatch_mailman(first_name, last_name, email, comments):
     message = Mail(
         from_email='***REMOVED***',
         to_emails=emails,
-        subject='Sending with Twilio SendGrid is Fun',
+        subject='KV Beats Website Message!',
         html_content="""Sender: <strong>{} {}</strong> <br/>
             Email: <strong>{}</strong> <br/>
             Message: <strong>{}</strong> <br/> """
