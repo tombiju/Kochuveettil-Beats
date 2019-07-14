@@ -3,9 +3,7 @@
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-api_key = """
-***REMOVED***
-"""
+api_key = "***REMOVED***"
 
 
 def dispatch_mailman(first_name, last_name, email, comments):

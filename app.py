@@ -23,4 +23,4 @@ def send_email():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)  # True only for development
+    app.run(debug=True)  # True only for development
