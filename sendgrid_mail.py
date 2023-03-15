@@ -3,13 +3,13 @@
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-api_key = "***REMOVED***"
+api_key = os.environ['SENDGRID_API_KEY']
 emails = [***REMOVED***]
 
 
 def dispatch_mailman(first_name, last_name, email, comments):
     message = Mail(
-        from_email='***REMOVED***',
+        from_email=os.environ['FROM_EMAIL'],
         to_emails=emails,
         subject='KV Beats Website Message!',
         html_content="""Sender: <strong>{} {}</strong> <br/>
