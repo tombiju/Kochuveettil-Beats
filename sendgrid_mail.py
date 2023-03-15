@@ -2,6 +2,7 @@
 # https://github.com/sendgrid/sendgrid-python
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
+import os
 
 api_key = os.environ['SENDGRID_API_KEY']
 emails = [***REMOVED***]
