@@ -9,6 +9,10 @@ emails = os.environ['RECIPIENT_EMAILS'].split(",")
 
 
 def dispatch_mailman(first_name, last_name, email, message_body):
+    fields = [first_name, last_name, email, message_body]
+    if len(list(filter(lambda field : field.strip() , fields))) != len(fields):
+        print("Empty field present.")
+        return
     message = Mail(
         from_email=os.environ['SENDER_EMAIL'],
         to_emails=emails,
