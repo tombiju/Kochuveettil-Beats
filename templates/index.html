@@ -457,12 +457,32 @@ Kochuveettil Beats is recognized across the globe for bringing the passion and p
             <h3 class="ui blue header">Reach Out to Us</h3>
             <div class="ui contact">
               <p><i class="envelope outline icon"></i> Kochuveettilbeats@gmail.com
-                <div class="ui yellow animated button" tabindex="0">
-                  <div class="visible content">Send</div>
-                  <div class="hidden content">
-                    <i class="paper plane icon"></i>
-                  </div>
+                <div class="ui icon header">
+                  <h3 class="ui blue header"><i class="airplane icon"></i><i class="paper plane outline icon"></i>
+                    Send a message!</h3>
                 </div>
+                <form class = "ui form" action = "/send_email" method = "POST" role = "form">
+                  <div class="content container">
+                    <p>
+                      Your First Name: <input type="text" name="first_name" required><br>
+                    </p>
+                    <p>
+                      Your Last Name: <input type="text" name="last_name" required><br>
+                    </p>
+                    <p>
+                      Your Email: <input type="text" name="email" required><br>
+                    </p>
+                    <p>
+                      Comments: <textarea rows="5" cols="30" name="comments"></textarea>
+                    </p>
+                  </div>
+                  <div class="ui error message"></div>
+                  <div class="actions">
+                    <p>
+                    <div id ="email_button" class="ui submit green basic inverted button">Submit</div>
+                    </p>
+                  </div>
+                </form>
               </p>
               <p><i class="phone icon"></i> 847-612-0606</p>
               <p><i class="comments outline icon"></i>
@@ -503,48 +523,9 @@ Kochuveettil Beats is recognized across the globe for bringing the passion and p
                     Wedding Wire
                   </button></a>
               </p>
-              <div class="ui basic modal">
-                <div class="ui icon header">
-                  <i class="airplane icon"></i><i class="paper plane outline icon"></i>
-                  Send a Message!
-                </div>
-          <form class = "ui form" action = "/send_email" method = "POST" role = "form">
-          <div class="content container">
-            <p>
-              Your First Name: <input type="text" name="first_name" required><br>
-            </p>
-            <p>
-              Your Last Name: <input type="text" name="last_name" required><br>
-            </p>
-             <p>
-              Your Email: <input type="text" name="email" required><br>
-            </p>
-            <p>
-              Comments: <textarea rows="5" cols="30" name="comments"></textarea>
-            </p>
-          </div>
-          <div class="ui error message"></div>
-          <div class="actions">
-            <p>
-            <div class="ui red basic cancel inverted button">
-              <i class="remove icon"></i>
-              Close
-            </div>
-            <div id ="email_button" class="ui submit green basic inverted button">Submit</div>
-            </form>
-          </p>
-        </div>
-      </div>
     </div>
-
-
-
-
-
   </div>
 </div>
-
-
 
 <div class="ui bottom menu " id="dark-mode-footer">
 
