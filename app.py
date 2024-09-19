@@ -6,6 +6,20 @@ from sendgrid_mail import dispatch_mailman
 app = Flask(__name__)
 
 
+@app.before_request
+def redirect_to_primary_domain():
+    # Get the current host (domain)
+    host = request.host
+    
+    # List of domains to redirect to kvbeats.com
+    redirect_domains = ['kochuveettilbeats.com', 'www.kochuveettilbeats.com',
+                        'kochuveetilbeats.com', 'www.kochuveetilbeats.com']
+    
+    # If the host is in the redirect list, perform the 301 redirect
+    if host in redirect_domains:
+        return redirect(f"https://kvbeats.com{request.path}", code=301)
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
